@@ -5,10 +5,16 @@ custom:
   webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true
+  serverless-iam-roles-per-function:
+    defaultInherit: true # Each function will inherit the service level roles too.
+  prune:
+    automatic: true
+    number: 3
 
 plugins:
   - serverless-webpack
   - serverless-iam-roles-per-function
+  - serverless-prune-plugin
 
 provider:
   name: aws
