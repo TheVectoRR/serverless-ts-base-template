@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const slsw = require('serverless-webpack');
 const nodeExternals = require('webpack-node-externals');
@@ -12,6 +13,11 @@ module.exports = {
     extensions: ['.mjs', '.json', '.ts'],
     symlinks: false,
     cacheWithContext: false,
+    alias: {
+      '@src': path.resolve(__dirname, './src'),
+      '@queries': path.resolve(__dirname, './queries'),
+      '@tests': path.resolve(__dirname, './tests'),
+    },
   },
   output: {
     libraryTarget: 'commonjs',
@@ -41,11 +47,11 @@ module.exports = {
     ],
   },
   plugins: [
-    // new ForkTsCheckerWebpackPlugin({
-    //   eslint: true,
-    //   eslintOptions: {
-    //     cache: true
-    //   }
-    // })
+    new ForkTsCheckerWebpackPlugin({
+      eslint: true,
+      eslintOptions: {
+        cache: true,
+      },
+    }),
   ],
 };

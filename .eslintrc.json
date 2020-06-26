@@ -1,6 +1,5 @@
 {
   "extends": [
-    "airbnb-base",
     "plugin:jest/all",
     "plugin:import/errors",
     "plugin:import/warnings",
@@ -30,6 +29,9 @@
   "overrides": [],
   "settings": {
     "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      },
       "alias": {
         "map": [
           ["@src", "./src"],
