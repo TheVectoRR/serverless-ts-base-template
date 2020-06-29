@@ -16,12 +16,16 @@
     "import/no-unresolved": [2, {"commonjs": true, "amd": true}],
     "import/prefer-default-export": "off",
     "max-len": ["error", {
-      "code":  150,
+      "code":  300,
       "ignoreComments":  true,
       "ignoreTrailingComments":  true,
       "ignoreUrls": true,
       "ignoreStrings": true,
       "ignoreTemplateLiterals": true
+    }],
+    "max-lines-per-function": ["error", {
+      "max": 30,
+      "skipBlankLines": true
     }]
   },
   "parser": "@typescript-eslint/parser",
