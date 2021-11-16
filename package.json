@@ -12,7 +12,7 @@
   "dependencies": {
     "@jest/globals": "^26.1.0",
     "aws-lambda": "^1.0.6",
-    "aws-sdk": "^2.705.0",
+    "aws-sdk": "^2.814.0",
     "serverless-prune-plugin": "^1.4.3",
     "source-map-support": "^0.5.10"
   },
